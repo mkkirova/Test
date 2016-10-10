@@ -1,16 +1,27 @@
 package lesson03;
 
 public class CarDemo {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Car golf = new Car();
+		Car bmw = new Car();
+		Car golf;
+		golf = new Car();
 		
-		golf.model = "vw golf 5";
+		golf.model = "VW Golf 1";
 		golf.maxSpeed = 200;
 		golf.color = "Blue";
-		System.out.println("The owner of the golf is " + golf.model);
+		golf.gear = 1;
+		golf.currentSpeed = 0;
 		
+		Person nikola = new Person();
+		nikola.name = "Nikola Kamenov";
+		nikola.age = 23;
+		
+		golf.owner = nikola;
+		
+		Person ivan = new Person();
+		ivan.name = "Ivan";
+		golf.owner = ivan;
+		
+		System.out.println("The owner of the golf is " + golf.owner.name);
 	}
-
 }
